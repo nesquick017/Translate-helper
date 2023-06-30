@@ -1,0 +1,35 @@
+{
+  "name": "words-exchanger",
+  "version": "1.0.0",
+  "description": "This util helps you to identify and exchange needed word or words in file.",
+  "main": "bin/exchanger.js",
+  "scripts": {
+    "test": "make jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nesquick017/translate-helper.git"
+  },
+  "keywords": [
+    "exchanger.",
+    "translator.",
+    "words",
+    "finder."
+  ],
+  "author": "Madorskii NIkita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nesquick017/translate-helper/issues"
+  },
+  "homepage": "https://github.com/nesquick017/translate-helper#readme",
+  "devDependencies": {
+    "eslint": "^8.43.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "jest": "^29.5.0",
+    "lodash": "^4.17.21"
+  }
+}
