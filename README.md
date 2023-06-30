@@ -29,9 +29,8 @@ Options:
   -V, --version  output the version number
   -h, --help     output usage information
 ```
-
-## Example: 
 ---
+## Example: 
 
 **Command-Line Utility for Word Replacement**
 
