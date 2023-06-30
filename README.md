@@ -1,4 +1,4 @@
-# translate-helper
+# Translate-helper
 
 The command-line utility operates on two files, which should be located in the same directory where the utility is executed. The first file is the text file to be analyzed, and the second file is the YAML configuration file.
 
