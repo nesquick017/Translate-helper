@@ -6,5 +6,5 @@ import exchange from '../src/index.js';
 
 test('fuction finished succesfully', () => {
   const pathToConfig = path.join(process.cwd(), '__fixtures__/stop-words.yaml');
-  expect(exchange('__fixtures__/file.txt', 'NewFile', pathToConfig)).toEqual(true);
+  expect(exchange('__fixtures__/file.txt', pathToConfig)).toEqual(true);
 });

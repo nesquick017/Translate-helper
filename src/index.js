@@ -8,7 +8,7 @@ import _ from 'lodash';
 const getNewFilePath = (fileName) => path.join(process.cwd(), `${fileName}.txt`);
 const getCurrentFilePath = (fileName) => path.join(process.cwd(), `${fileName}`);
 
-export default (file, newFileName, configName) => {
+export default (file, configName) => {
   const fileData = fs.readFileSync(getCurrentFilePath(file), 'utf-8');
   const config = yaml.load(fs.readFileSync(configName), 'utf-8');
   const newFileData = fileData
@@ -19,7 +19,7 @@ export default (file, newFileName, configName) => {
     })
     .join(' ');
   try {
-    fs.writeFileSync(getNewFilePath(newFileName), newFileData);
+    fs.writeFileSync(getNewFilePath('Exchanger_result'), newFileData);
     return true;
   } catch (error) {
     if (error) {

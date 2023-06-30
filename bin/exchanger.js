@@ -6,7 +6,7 @@ import exchange from '../src/index.js';
 program
   .version('1.0.0')
   .description('Text analysis tool that replaces stop words with new values')
-  .arguments('<File> <newFileName> <configName>')
+  .arguments('<File> <configName>')
   .helpOption('-h, --help', 'output usage information')
-  .action((File, newFileName, configName) => exchange(File, newFileName, configName))
+  .action((File, configName) => exchange(File, configName))
   .parse(process.argv);
