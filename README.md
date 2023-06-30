@@ -1,6 +1,14 @@
 # translate-helper
 
-This is a command-line utility analyzes text and replaces any occurrences of stop words with desired new values. This helps you process texts by removing unwanted words or replacing them with more appropriate ones. The utility is user-friendly and can be easily automated for text data processing.
+The command-line utility operates on two files, which should be located in the same directory where the utility is executed. The first file is the text file to be analyzed, and the second file is the YAML configuration file.
+
+The text file contains the original text to be processed. The utility reads this file and performs word analysis and replacement based on the provided stop words in the YAML configuration.
+
+The YAML configuration file contains a mapping of stop words and their corresponding new values. It should be in YAML format and follow the key-value structure. The utility uses this configuration to identify stop words in the text and replace them with the desired values.
+
+Once the utility completes the analysis and replacement process, it generates a result file in the same directory. The result file is named "Exchanger_Result.txt" and contains the modified text with the replaced words.
+
+By placing the text file, YAML configuration file, and executing the utility in the same directory, you ensure that the utility can access and process the necessary files and generate the result file as expected.
 
 ## How to install:
 
@@ -13,7 +21,7 @@ make install
 ## Guideline:
 
 ```
-Usage: exchanger [options] <File> <newFileName> <configName>
+Usage: exchanger [options] <File> <configName>
 
 Text analysis tool that replaces stop words with new values
 
