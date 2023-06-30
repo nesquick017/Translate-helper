@@ -1,11 +1,10 @@
+/* eslint-disable import/extensions */
 /* eslint-disable import/no-extraneous-dependencies */
+import path from 'path';
 import { test, expect } from '@jest/globals';
-import { testFunction, getName } from '../bin/exchanger';
+import exchange from '../src/index.js';
 
-const testString = 'im jest and im working';
-
-test('jest should work', () => {
-  expect(testString).toEqual('im jest and im working');
-  expect(testFunction()).toEqual(5);
-  expect(getName()).toEqual('Nikita');
+test('fuction finished succesfully', () => {
+  const pathToConfig = path.join(process.cwd(), '__fixtures__/stop-words.yaml');
+  expect(exchange('__fixtures__/file.txt', 'NewFile', pathToConfig)).toEqual(true);
 });
