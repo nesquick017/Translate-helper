@@ -30,4 +30,40 @@ Options:
   -h, --help     output usage information
 ```
 
+## Example: 
+---
+
+**Command-Line Utility for Word Replacement**
+
+The command-line utility takes a text file and a YAML object of stop words as input. It analyzes the text and replaces any occurrences of stop words with their corresponding new values from the YAML object.
+
+**Example:**
+
+Let's consider the following text:
+
+```
+"Nikita went to the store, Oleg gave a watermelon, Katya made a call, Sasha took a ball."
+```
+
+And we have a YAML object of stop words in the same directory as the utility:
+
+```yaml
+Nikita: 'John'
+Oleg: 'Peter'
+Katya: 'Emily'
+Sasha: 'Alex'
+```
+
+The utility iterates through each word in the text and checks if it exists as a key in the YAML object. If a word is found as a key, it is replaced with the corresponding value from the YAML object.
+
+As a result, we get the modified text:
+
+```
+"John went to the store, Peter gave a watermelon, Emily made a call, Alex took a ball."
+```
+
+This utility enables text analysis and automated replacement of specific words with desired values based on the provided YAML object. Remember that the YAML object of stop words must be in YAML format and located in the same directory where the utility is executed.
+
+---
+
 <a href="https://codeclimate.com/github/nesquick017/translate-helper/maintainability"><img src="https://api.codeclimate.com/v1/badges/34c92a1dee77a8873972/maintainability" /></a>    <a href="https://codeclimate.com/github/nesquick017/translate-helper/test_coverage"><img src="https://api.codeclimate.com/v1/badges/34c92a1dee77a8873972/test_coverage" /></a>
