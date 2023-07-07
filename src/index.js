@@ -5,8 +5,10 @@ import path from 'path';
 import yaml from 'js-yaml';
 import _ from 'lodash';
 
-const getNewFilePath = (fileName) => path.join(process.cwd(), `${fileName}.txt`);
-const getCurrentFilePath = (fileName) => path.join(process.cwd(), `${fileName}`);
+const getNewFilePath = (fileName) =>
+  path.join(process.cwd(), `${fileName}.txt`);
+const getCurrentFilePath = (fileName) =>
+  path.join(process.cwd(), `${fileName}`);
 
 export default (file, configName) => {
   const fileData = fs.readFileSync(getCurrentFilePath(file), 'utf-8');
